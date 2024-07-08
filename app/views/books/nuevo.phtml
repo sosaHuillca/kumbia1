@@ -1,0 +1,20 @@
+<h1>Nuevo</h1>
+
+<?php View::content(); ?>
+
+<form method="post">
+  <label>Title</label>
+  <input type="text" name="books[title]">
+  <br>
+  <label>Genero</label>
+  <input type="text" name="books[genre]">
+  <br>
+  <label>Autor</label>
+  <select name="books[author_id]">
+    <?php foreach($authors as $a): ?>
+    <option value="<?= $a->author_id?>"><?= $a->name ?></option>
+    <?php endforeach; ?>
+  </select>
+  <br>
+  <button type="submit">Guardar</button>
+</form>

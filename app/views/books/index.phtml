@@ -1,0 +1,18 @@
+<h1>index Authors</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Titulo</th>
+    <th>Descripcion</th>
+  </tr>
+  </thead>
+  <tbody>
+  <?php foreach ($books as $b): ?>
+    <tr>
+    <td><?= $b->title ?></td>
+      <td><?= $b->genre ?><td>
+    </td>
+  <?php endforeach; ?>
+  </tbody>
+</table>
